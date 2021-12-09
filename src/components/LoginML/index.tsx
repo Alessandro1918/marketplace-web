@@ -6,6 +6,8 @@ export function LoginML() {
     const { signinUrl } = useContext(AuthContext)
 
     return(
-        <a href={signinUrl}>Login no ML</a>
+        <button>
+            <a href={signinUrl}>Login no ML</a>
+        </button>
     )
 }

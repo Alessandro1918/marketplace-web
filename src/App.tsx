@@ -1,20 +1,17 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
-import { LoginML } from './components/LoginML'
-import { ItemsList } from './components/ItemsList'
+
+import { Router } from './routes'
+
 
 function App() {
 
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        
-        <LoginML/>
-        
-        <ItemsList/>
-      </header>
+      <img src={logo} className="App-logo" alt="logo" />
+      
+      <Router/>
     </div>
   );
 }
