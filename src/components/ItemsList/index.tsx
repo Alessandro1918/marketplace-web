@@ -57,7 +57,7 @@ export function ItemsList() {
                         <li key={item.title}>
                             <p>{`${item.title} - R$${item.price}`}</p>
                             <button><a href={item.ml_url}>Ver anúncio</a></button>
-                            <button><Link to={`/items/edit/${item.ml_id}`}>Editar</Link></button>
+                            <button><Link to={`/items/edit/${item.ml_id}`} state={{item: item}}>Editar</Link></button>
                             <button onClick={() => {confirmDelete(item)}}>Excluir</button>
                         </li>
                     )

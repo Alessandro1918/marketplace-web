@@ -7,14 +7,14 @@ export function Add(){
 
     const { accessToken } = useContext(AuthContext)
 
-    const [ title/*, set_title*/ ] = useState('Cenoura')
-    const [ description/*, set_description*/ ] = useState('Descrição do item: \nCenoura')
-    const [ category_id/*, set_category_id*/ ] = useState('MLB3530')
-    const [ price/*, set_price*/ ] = useState(10)
-    const [ currency_id/*, set_currency_id*/ ] = useState('BRL')
-    const [ available_quantity/*, set_available_quantity*/ ] = useState(1)
-    const [ condition/*, set_condition*/ ] = useState('not_specified')
-    const [ listing_type_id/*, set_listing_type_id*/ ] = useState('free')
+    const [ title, set_title ] = useState('')
+    const [ description, set_description ] = useState('')
+    const category_id = 'MLB3530'
+    const [ price, set_price ] = useState(0)
+    const currency_id = 'BRL'
+    const available_quantity = 1
+    const condition = 'not_specified'
+    const listing_type_id = 'free'
 
     async function add(){
         
@@ -36,6 +36,15 @@ export function Add(){
 
     return(
         <div>
+            <div>
+                <p>Título do anúncio</p>
+                <input name="title" placeholder="Ex: Banana" onChange={(e) => set_title(e.target.value)}/>
+                <p>Descrição</p>
+                <input name="description" placeholder="Ex: Banana prata, direto do Produtor" onChange={(e) => set_description(e.target.value)}/>
+                <p>Preço (R$)</p>
+                <input name="price" placeholder="Ex: 10" onChange={(e) => set_price(Number(e.target.value))}/>
+            </div>
+
             <button onClick={add}>
                 Adicionar
             </button>
