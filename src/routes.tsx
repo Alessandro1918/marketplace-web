@@ -12,8 +12,6 @@ export function Router() {
                 <Route path="/" element={<Home/>}/>
                 <Route path="/items/add" element={<Add/>}/>
                 <Route path="/items/edit/:ml_id" element={<Edit/>}/>
-                {/*<Route path="/orphanages/create" component={CreateOrphanage}/>*/}
-                {/*<Route path="/orphanages/:id" component={Orphanage}/>*/}
             </Routes>
         </BrowserRouter>
     )
