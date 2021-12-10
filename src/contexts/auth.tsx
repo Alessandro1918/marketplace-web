@@ -30,7 +30,9 @@ export function AuthProvider(props: AuthProviderData) {
 
     //Children 1: signinUrl
     //Used by the <a>Login no ML</a> tag
-    const signinUrl = 'http://localhost:2000/ml'
+    const API_URL = 'http://localhost:2000'     //dev
+    //const API_URL = 'https://marketplace-alessandro-api.herokuapp.com'    //prod
+    const signinUrl = `${API_URL}/ml`
 
     //Children 2: accessToken
     //After login, page will reload with code in the url.
